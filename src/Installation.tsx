@@ -1,0 +1,202 @@
+import React from 'react'
+
+const Installation = () => {
+  return (
+    <section id="installation" className="py-16">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl font-bold mb-4">Installation</h2>
+        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          Get started with AI Summarizer in just a few simple steps.
+        </p>
+      </div>
+
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+          <div className="p-6 bg-blue-50 dark:bg-slate-700 border-b border-slate-200 dark:border-slate-600">
+            <h3 className="text-2xl font-bold mb-2">Download & Install</h3>
+            <p className="text-slate-600 dark:text-slate-300">
+              Follow these steps to install the AI Summarizer extension in VS Code.
+            </p>
+          </div>
+          
+          <div className="p-6">
+            <ol className="space-y-8">
+              <li className="flex">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 font-bold mr-4">
+                  1
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2">Download the Extension Package</h4>
+                  <p className="mb-4 text-slate-600 dark:text-slate-400">
+                    Download the latest version of the AI Summarizer extension (.vsix file).
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <a 
+                      href="#" 
+                      className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                    >
+                      <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                      </svg>
+                      Download VSIX
+                    </a>
+                    <a 
+                      href="https://github.com/ai-summarizer/vscode-extension" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center px-4 py-2 bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-900 dark:text-white font-medium rounded-lg transition-colors"
+                    >
+                      <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      GitHub Repository
+                    </a>
+                  </div>
+                </div>
+              </li>
+              
+              <li className="flex">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 font-bold mr-4">
+                  2
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2">Open VS Code</h4>
+                  <p className="text-slate-600 dark:text-slate-400">
+                    Launch Visual Studio Code on your computer.
+                  </p>
+                </div>
+              </li>
+              
+              <li className="flex">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 font-bold mr-4">
+                  3
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2">Access Extensions View</h4>
+                  <p className="mb-2 text-slate-600 dark:text-slate-400">
+                    Open the Extensions view by clicking on the Extensions icon in the Activity Bar or by pressing:
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-md font-mono text-sm">Ctrl+Shift+X</span>
+                    <span className="text-slate-500 dark:text-slate-400">(Windows/Linux)</span>
+                    <span className="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-md font-mono text-sm">Cmd+Shift+X</span>
+                    <span className="text-slate-500 dark:text-slate-400">(macOS)</span>
+                  </div>
+                </div>
+              </li>
+              
+              <li className="flex">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 font-bold mr-4">
+                  4
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2">Install from VSIX</h4>
+                  <p className="mb-4 text-slate-600 dark:text-slate-400">
+                    Click on the "..." menu in the top-right of the Extensions view, select "Install from VSIX...", and choose the downloaded .vsix file.
+                  </p>
+                  <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+                    <div className="flex items-center text-amber-600 dark:text-amber-400 mb-2">
+                      <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                      </svg>
+                      <span className="font-medium">Tip</span>
+                    </div>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      You can also install the extension by running the "Extensions: Install from VSIX..." command from the Command Palette (Ctrl+Shift+P or Cmd+Shift+P).
+                    </p>
+                  </div>
+                </div>
+              </li>
+              
+              <li className="flex">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 font-bold mr-4">
+                  5
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2">Restart VS Code</h4>
+                  <p className="text-slate-600 dark:text-slate-400">
+                    After installation, restart VS Code when prompted to activate the extension.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          
+          <div className="p-6 bg-green-50 dark:bg-green-900/20 border-t border-slate-200 dark:border-slate-600">
+            <div className="flex items-center mb-4">
+              <svg className="h-6 w-6 text-green-600 dark:text-green-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <h3 className="text-xl font-bold">Ready to Use</h3>
+            </div>
+            <p className="text-slate-700 dark:text-slate-300">
+              After installation, AI Summarizer will automatically start monitoring AI assistant activities. You'll see a new icon in the Activity Bar and a status indicator in the Status Bar.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+          <h3 className="text-xl font-bold mb-4">System Requirements</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center">
+                <svg className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                VS Code Version
+              </h4>
+              <p className="text-slate-600 dark:text-slate-400">
+                VS Code 1.60.0 or higher
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center">
+                <svg className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"></path>
+                </svg>
+                Disk Space
+              </h4>
+              <p className="text-slate-600 dark:text-slate-400">
+                Approximately 5 MB
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center">
+                <svg className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+                </svg>
+                Memory Usage
+              </h4>
+              <p className="text-slate-600 dark:text-slate-400">
+                Minimal (less than 50 MB)
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center">
+                <svg className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+                Compatible AI Assistants
+              </h4>
+              <p className="text-slate-600 dark:text-slate-400">
+                Roo Code, Cline, and other configurable assistants
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Installation

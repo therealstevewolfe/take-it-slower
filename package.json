@@ -1,0 +1,219 @@
+{
+  "name": "vscode-ai-summarizer",
+  "version": "1.0.0",
+  "publisher": "ai-summarizer",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "license": "MIT",
+  "displayName": "AI Summarizer",
+  "description": "Real-time visualization and summarization of AI coding assistant activities",
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "ai",
+    "assistant",
+    "visualization",
+    "monitoring",
+    "productivity"
+  ],
+  "icon": "resources/icon.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiSummarizer.togglePanel",
+        "title": "AI Summarizer: Toggle Activity Panel"
+      },
+      {
+        "command": "aiSummarizer.focusCurrentTask",
+        "title": "AI Summarizer: Focus on Current AI Task"
+      },
+      {
+        "command": "aiSummarizer.collapseAll",
+        "title": "AI Summarizer: Collapse All Task Groups"
+      },
+      {
+        "command": "aiSummarizer.expandAll",
+        "title": "AI Summarizer: Expand All Task Groups"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aiSummarizer",
+          "title": "AI Summarizer",
+          "icon": "resources/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "aiSummarizer": [
+        {
+          "id": "aiSummarizerActivityView",
+          "name": "AI Activities",
+          "icon": "resources/icon.png"
+        },
+        {
+          "id": "aiSummarizerTimelineView",
+          "name": "Timeline",
+          "icon": "resources/icon.png"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "AI Summarizer",
+      "properties": {
+        "aiSummarizer.general.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable the AI Summarizer extension"
+        },
+        "aiSummarizer.general.refreshRate": {
+          "type": "number",
+          "default": 200,
+          "description": "Refresh rate for UI updates in milliseconds"
+        },
+        "aiSummarizer.general.maxVisibleTasks": {
+          "type": "number",
+          "default": 50,
+          "description": "Maximum number of visible tasks in the activity panel"
+        },
+        "aiSummarizer.general.defaultView": {
+          "type": "string",
+          "enum": [
+            "hierarchical",
+            "timeline",
+            "compact"
+          ],
+          "default": "hierarchical",
+          "description": "Default view mode for the activity panel"
+        },
+        "aiSummarizer.notifications.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable notifications"
+        },
+        "aiSummarizer.notifications.showTaskStart": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show notifications when tasks start"
+        },
+        "aiSummarizer.notifications.showTaskCompletion": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show notifications when tasks complete"
+        },
+        "aiSummarizer.notifications.showErrors": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show notifications for errors"
+        },
+        "aiSummarizer.notifications.maxNotificationsPerMinute": {
+          "type": "number",
+          "default": 5,
+          "description": "Maximum number of notifications per minute"
+        },
+        "aiSummarizer.appearance.colorTheme": {
+          "type": "string",
+          "enum": [
+            "default",
+            "highContrast",
+            "monochrome",
+            "pastel"
+          ],
+          "default": "default",
+          "description": "Color theme for the AI Summarizer"
+        },
+        "aiSummarizer.appearance.animationsEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable animations"
+        },
+        "aiSummarizer.appearance.showStatusBarIndicator": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show status bar indicator"
+        },
+        "aiSummarizer.appearance.compactMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use compact mode for the activity panel"
+        },
+        "aiSummarizer.assistants.rooCode.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable monitoring for Roo Code assistant"
+        },
+        "aiSummarizer.assistants.rooCode.outputChannel": {
+          "type": "string",
+          "default": "Roo Code",
+          "description": "Output channel name for Roo Code assistant"
+        },
+        "aiSummarizer.assistants.cline.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable monitoring for Cline assistant"
+        },
+        "aiSummarizer.assistants.cline.outputChannel": {
+          "type": "string",
+          "default": "Cline",
+          "description": "Output channel name for Cline assistant"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "aiSummarizer.togglePanel",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a"
+      },
+      {
+        "command": "aiSummarizer.focusCurrentTask",
+        "key": "ctrl+shift+f",
+        "mac": "cmd+shift+f"
+      },
+      {
+        "command": "aiSummarizer.collapseAll",
+        "key": "ctrl+shift+c",
+        "mac": "cmd+shift+c"
+      },
+      {
+        "command": "aiSummarizer.expandAll",
+        "key": "ctrl+shift+e",
+        "mac": "cmd+shift+e"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^16.x.x",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "@vscode/vsce": "^2.15.0",
+    "eslint": "^8.18.0",
+    "typescript": "^4.7.4",
+    "vscode-test": "^1.6.1"
+  }
+}
